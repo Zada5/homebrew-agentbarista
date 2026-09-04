@@ -9,7 +9,10 @@ cask "agentbarista" do
 
   livecheck do
     url "https://agentbarista.com/appcast.xml"
-    strategy :sparkle
+    # The feed carries both sparkle:shortVersionString (1.4.2) and sparkle:version (the
+    # auto-stamped build number), which the default strategy joins as "1.4.2,271". Take only
+    # the short version, so livecheck matches the version users actually see.
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
