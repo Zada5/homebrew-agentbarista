@@ -7,8 +7,17 @@ Mac awake while AI coding agents work, then lets it sleep when they finish.
 
 ```sh
 brew tap zada5/agentbarista
+brew trust zada5/agentbarista        # Homebrew requires this for any third-party tap
 brew install --cask agentbarista
 ```
+
+Without the `brew trust` line, Homebrew refuses with *"Refusing to load cask … from untrusted
+tap"*. That is Homebrew's policy for every tap outside homebrew-core, not something specific to
+this one — it wants you to have looked at the cask before running it. It is one file:
+[`Casks/agentbarista.rb`](Casks/agentbarista.rb).
+
+Already have AgentBarista in `/Applications` from a direct download? Add `--force` to the install
+so Homebrew takes over managing it.
 
 ## About
 
