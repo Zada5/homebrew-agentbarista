@@ -1,6 +1,6 @@
 cask "agentbarista" do
-  version "1.4.7"
-  sha256 "0cb81d72421944d28b223ef95f5e7819f32ddd6dd83a727b74c06ad0fc395972"
+  version "1.4.8"
+  sha256 "25200985c84e048a49e98eca954469e504654256f85f605d9d66250e9fc6b8fb"
 
   url "https://agentbarista.com/dl/AgentBarista-#{version}.dmg"
   name "AgentBarista"
